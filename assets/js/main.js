@@ -57,3 +57,17 @@ jQuery(document).ready(function($) {
 
 
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const toggleLinks = document.querySelectorAll('.toggle-text');
+    
+    toggleLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const summary = this.parentNode;
+            const isExpanded = summary.classList.toggle('expanded');
+            this.textContent = isExpanded ? '... read less' : '... read more';
+        });
+    });
+});
+
