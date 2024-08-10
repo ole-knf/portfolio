@@ -542,7 +542,6 @@ iframe {
   position: relative;
   max-height: 7em; /* adjust based on your needs */
   overflow: hidden;
-  padding-bottom: 1.5em;
 }
 
 .summary.expanded {
