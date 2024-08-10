@@ -69,5 +69,34 @@ document.addEventListener('DOMContentLoaded', function() {
             this.textContent = isExpanded ? '... read less' : '... read more';
         });
     });
+
+    const containers = document.querySelectorAll('.project-container');
+
+    containers.forEach(container => {
+        const items = container.querySelectorAll('.project-item');
+        console.log(items.length)
+        const showMoreButton = container.querySelector('.show-more');
+                
+        // Initially display only the top 3 items
+        items.forEach((item, index) => {
+            if (index < 3) {
+                item.classList.add('visible');
+            }
+        });
+        
+        if (items.length > 4) { // 4 items allowed: 3 projects + button
+            showMoreButton.style.display = 'block'; // Show button if more than 3 items
+        } else {
+            showMoreButton.style.display = 'none'; // Hide button if 3 or fewer items
+        }
+
+        // Show more items when the button is clicked
+        showMoreButton.addEventListener('click', () => {
+            items.forEach(item => {
+                item.classList.add('visible');
+            });
+            showMoreButton.style.display = 'none'; // Hide the button after clicking
+        });
+    });
 });
 

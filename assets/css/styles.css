@@ -552,7 +552,6 @@ iframe {
 .toggle-text {
   display: block;
   color: #3aaa64; /* adjust color as needed */
-  text-decoration: underline;
   cursor: pointer;
   position: absolute;
   bottom: 0;
@@ -567,4 +566,22 @@ iframe {
 a.toggle-text {
   outline: none;
   border: none;
+}
+
+.project-item {
+  display: none;
+}
+
+.project-item.visible {
+  display: block; /* Show items with the 'visible' class */
+}
+.show-more {
+  display: none; /* Show the 'Show More' button */
+  margin-top: 10px;
+  color: #3aaa64;
+  background-color: #fff;
+  text-decoration: underline;
+  outline: none;
+  border: none;
+  width: 100%;
 }
