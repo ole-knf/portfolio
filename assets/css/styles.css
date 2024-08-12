@@ -542,6 +542,7 @@ iframe {
   position: relative;
   max-height: 7.5em; /* adjust based on your needs */
   overflow: hidden;
+  
 }
 
 .summary.expanded {
@@ -584,4 +585,13 @@ a.toggle-text {
   outline: none;
   border: none;
   width: 100%;
+}
+
+span.year {
+  text-align: left;
+}
+
+.content {
+  hyphens: auto;
+  text-align: justify;
 }
