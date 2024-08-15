@@ -541,7 +541,7 @@ iframe {
 
 .summary {
   position: relative;
-  max-height: 7.5em; /* adjust based on your needs */
+  max-height:  calc(1.5em * 4); /* adjust based on your needs */
   overflow: hidden;
   
 }
